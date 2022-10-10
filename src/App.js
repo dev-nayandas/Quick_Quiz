@@ -9,6 +9,7 @@ import Topics from './components/Topics/Topics';
 import Blog from './components/Blog/Blog';
 import Statastics from './components/Statastics/Statastics'
 import Main from './Layout/Main';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         {path: '/statastics', element:<Statastics></Statastics> },
         {path: '/blog', element:<Blog></Blog> }
     ]},
+    {path: '*', element: <ErrorPage></ErrorPage>}
   ])
   return (
     <div className="App">
