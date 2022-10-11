@@ -1,21 +1,24 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import { Button, Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Topic.css'
 
 const Topic = ({topic}) => {
     const {name,id,logo,total} = topic;
     return (
-        <CardGroup>
+        <CardGroup className='card'>
         <Card>
           <Card.Img variant="top" src={logo}/>
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title>{name}</Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in
-              to additional content. This content is a little bit longer.
+              <h5>Total Question : {total}</h5>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
+            <Link to={`/topic/${id}`}>
+              <Button variant="primary">Start Quiz</Button>
+            </Link>
           </Card.Footer>
         </Card>
         

@@ -1,0 +1,16 @@
+/* .card {
+    margin: 0 auto;
+    width: 50%;
+}
+.card img{
+    margin: 0 auto;
+    width: 50%;
+} */
+.card{
+    background-color: black;
+    width:300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: aliceblue;
+    
+}

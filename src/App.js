@@ -10,6 +10,7 @@ import Blog from './components/Blog/Blog';
 import Statastics from './components/Statastics/Statastics'
 import Main from './Layout/Main';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Question from './components/Question/Question';
 
 
 function App() {
@@ -19,7 +20,11 @@ function App() {
       element:<Main></Main> , 
       children:[
         {path: '/', element:<Home></Home> },
-        {path: '/home', element:<Home></Home> },
+        {
+          path: '/home', 
+         
+          element:<Home></Home> 
+        },
         {
           path: '/topics', 
           loader: async () => {
@@ -27,9 +32,25 @@ function App() {
           },
           element:<Topics></Topics>
          },
-        {path: '/statastics', element:<Statastics></Statastics> },
+         {
+          path:'/topic/:topicId',
+          loader: async ({params})=>{
+            // console.log(params.topicId)
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+          },
+
+          element:<Question></Question>
+         },
+        {
+          path: '/statastics', 
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element:<Statastics></Statastics> 
+        },
         {path: '/blog', element:<Blog></Blog> }
     ]},
+    
     {path: '*', element: <ErrorPage></ErrorPage>}
   ])
   return (
