@@ -8,7 +8,7 @@ const Question = () => {
     console.log(quiz)
     return (
         <div>
-            <h2>{quiz.data.questions.length}</h2>
+            {/* <h2>{quiz.data.questions.length}</h2> */}
 
             {
               quiz.data.questions.map(file=> <File
