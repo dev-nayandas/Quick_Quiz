@@ -1,3 +1,3 @@
--It's a quiz app for know about web development
--The topics are JS, react, css and git
--If anyone click on quiz start button he/she will rediect to quiz page
+--It's a quiz app for know about web development
+--The topics are JS, react, css and git
+--If anyone click on quiz start button he/she will rediect to quiz page
