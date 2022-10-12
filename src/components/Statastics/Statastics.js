@@ -5,11 +5,13 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
 const Statastics = () => {
     const data = useLoaderData();
+    const total = data.data
+    console.log(total)
     return (
         <div>
             <h2>This Statastics page{data.data.length}</h2>
             <ResponsiveContainer width="100%" height="100%">
-                <BarChart width={150} height={40} data={data.data}>
+                <BarChart width={150} height={40} data={data}>
                 <Bar dataKey="total" fill="#8884d8" />
                  </BarChart>
             </ResponsiveContainer>

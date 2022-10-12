@@ -1,0 +1,14 @@
+.baner{
+    background-image: url('https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: 1600px 800px;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: darken,luminosity;
+    width: 1400px;
+    height: 400px;
+    opacity:0.9;
+    text-align: center;
+    color: beige;
+    align-items: center;
+    justify-content: center;
+}

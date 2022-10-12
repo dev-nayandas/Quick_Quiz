@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './File.css'
 import { EyeIcon ,EyeSlashIcon} from '@heroicons/react/24/solid';
+import { toast } from 'react-toastify';
 
 const File = ({file}) => {
    const {correctAnswer,id, options, question}= file;
@@ -17,6 +18,7 @@ const File = ({file}) => {
    
         if(selectedOption === correctAnswer ){
             alert('right answer')
+            toast.success('correct ans',{autoClose:1000})
         }else{
             alert('wrong answer')
         }
